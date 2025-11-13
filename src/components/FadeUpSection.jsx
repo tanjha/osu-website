@@ -12,6 +12,7 @@ export default function FadeUpSection({ children }) {
   useEffect(() => {
     const el = ref.current;
 
+    // Create a scroll-triggered animation
     const animation = gsap.fromTo(
       el,
       { y: 50, opacity: 0 },
@@ -22,12 +23,13 @@ export default function FadeUpSection({ children }) {
         ease: "power2.out",
         scrollTrigger: {
           trigger: el,
-          start: "top 80%",
-          toggleActions: "play none none reverse",
+          start: "top 80%",     // when top of element hits 80% of viewport height
+          toggleActions: "play none none reverse", // play when visible, reverse when out
         },
       }
     );
 
+    // cleanup when component unmounts
     return () => {
       animation.scrollTrigger?.kill();
       animation.kill();
