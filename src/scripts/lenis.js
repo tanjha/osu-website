@@ -1,5 +1,3 @@
-
-
 import Lenis from "@studio-freight/lenis";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -26,4 +24,3 @@ window.addEventListener("load", () => {
     console.log("ScrollTrigger refreshed ✅");
   }, 500);
 });
-

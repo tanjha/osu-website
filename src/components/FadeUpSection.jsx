@@ -1,5 +1,3 @@
-
-
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -23,10 +21,10 @@ export default function FadeUpSection({ children }) {
         ease: "power2.out",
         scrollTrigger: {
           trigger: el,
-          start: "top 80%",     // when top of element hits 80% of viewport height
+          start: "top 80%", // when top of element hits 80% of viewport height
           toggleActions: "play none none reverse", // play when visible, reverse when out
         },
-      }
+      },
     );
 
     // cleanup when component unmounts
@@ -38,4 +36,3 @@ export default function FadeUpSection({ children }) {
 
   return <div ref={ref}>{children}</div>;
 }
-
