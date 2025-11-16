@@ -1,11 +1,13 @@
 ---
-import FadeUpSection from "../components/FadeUpSection.jsx";
-import TestScroll from "../layouts/test_scrolling.astro";
-import Scroll from "../components/scroll_test.astro";
+import FadeUpSection from "@/components/FadeUpSection.jsx";
+import Scroll from "@/components/scroll_test.astro";
+import Navigation from "@/components/NavigationMenu.tsx";
+import Layout from "@/layouts/Layout.astro";
 ---
 
-<TestScroll>
+<Layout>
+  <Navigation client:load />
   <FadeUpSection client:load>
     <Scroll />
   </FadeUpSection>
-</TestScroll>
+</Layout>
