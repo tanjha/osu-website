@@ -1,26 +1,37 @@
 ---
 import "@/styles/global.css";
+
+import ModeToggle from "@/components/ModeToggle";
+import Navigation from "@/components/NavigationMenu.tsx";
+const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" class="dark">
+<html lang="en">
   <head>
+    <script is:inline>
+      document.documentElement.classList.toggle(
+        "dark",
+        localStorage.theme === "dark" ||
+          (!("theme" in localStorage) &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches),
+      );
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro Basics</title>
+    <title>{title}</title>
   </head>
   <body>
-    <slot />
+    <header class="w-full top-0 sticky z-50">
+      <div class="px-6 3xl:fixed:px-0 h-14 items-center flex text-center">
+        <Navigation client:load />
+        <div class="flex flex-1 flex-row justify-end">
+          <ModeToggle client:only="react" />
+        </div>
+      </div>
+    </header>
   </body>
+  <slot />
 </html>
-
-<style>
-  html,
-  body {
-    margin: 0;
-    width: 100%;
-    height: 100%;
-  }
-</style>

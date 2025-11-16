@@ -1,12 +1,10 @@
 ---
 import FadeUpSection from "@/components/FadeUpSection.jsx";
 import Scroll from "@/components/scroll_test.astro";
-import Navigation from "@/components/NavigationMenu.tsx";
 import Layout from "@/layouts/Layout.astro";
 ---
 
-<Layout>
-  <Navigation client:load />
+<Layout title="Home">
   <FadeUpSection client:load>
     <Scroll />
   </FadeUpSection>
