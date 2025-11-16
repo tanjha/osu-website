@@ -79,11 +79,74 @@
 <!-- </html> -->
 
 
----
-import FadeUpSection from "../components/FadeUpSection.jsx";
-import test_scrolling from "../layouts/test_scrolling.astro"
-import scroll_test from "../components/scroll_test.astro"
----
-<test_scrolling>
-<scroll_test></scroll_test>
-</test_scrolling>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lenis - Smooth Scrolling Library</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <section id="vertical">
+        <div class="container">
+            <div class="vertical__content">
+                <div class="col col_left">
+                    <h2 class="vertical__heading"><span>About</span><span>Smooth</span><span>Scroll</span></h2>
+                </div>
+                <div class="col col_right">
+                    <div class="vertical__item">
+                        <h3>Smooth Scroll Lenis</h3>
+                        <p>Lenis is an open-source library built to standardize scroll experiences and sauce up websites with butter-smooth navigation, all while using the platform and keeping it accessible.</p>
+                    </div>
+                    <div class="vertical__item">
+                        <h3>Smooth Scroll Lenis</h3>
+                        <p>Lenis is an open-source library built to standardize scroll experiences and sauce up websites with butter-smooth navigation, all while using the platform and keeping it accessible.</p>
+                    </div>
+                    <div class="vertical__item">
+                        <h3>Smooth Scroll Lenis</h3>
+                        <p>Lenis is an open-source library built to standardize scroll experiences and sauce up websites with butter-smooth navigation, all while using the platform and keeping it accessible.</p>
+                    </div>
+                    <div class="vertical__item">
+                        <h3>Smooth Scroll Lenis</h3>
+                        <p>Lenis is an open-source library built to standardize scroll experiences and sauce up websites with butter-smooth navigation, all while using the platform and keeping it accessible.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="horizontal">
+        <div class="container">
+            <div class="horizontal__content">
+                <div class="horizontal__item">
+                    <div class="horizontal__num">1</div>
+                </div>
+                <div class="horizontal__item">
+                    <div class="horizontal__num">2</div>
+                </div>
+                <div class="horizontal__item">
+                    <div class="horizontal__num">3</div>
+                </div>
+                <div class="horizontal__item">
+                    <div class="horizontal__num">4</div>
+                </div>
+                <div class="horizontal__item">
+                    <div class="horizontal__num">5</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+  <script type="module">
+    import gsap from 'https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js';
+    import ScrollTrigger from 'https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js';
+    import Lenis from 'https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.26/dist/lenis.min.js';    
+    gsap.registerPlugin(ScrollTrigger);
+</script>
+<script type="module" src='../scripts/scrolling.js'></script>
+    </body>
+</html>

@@ -1,20 +1,109 @@
-<section id="vertical">
-  <div class="container">
-    <div class="vertical_content">
-      <div class="col col_left">
-        <h2 class="vertical_heading"><span>About</span><span>Smooth</span><span>Scroll</span></h2>
+<div id="container">
+  <section id="vertical">
+    <div class="container">
+      <div class="vertical_content">
+        <div class="col col_left">
+          <h2 class="vertical_heading"><span>About</span><span>Smooth</span><span>Scroll</span></h2>
       </div>
       <div class="col col_right">
         <div class="vertical_item">
           <h3>Smooth Scroll Lenis</h3>
-          <p></p>
+          <p>Something something</p>
         </div>
+        <div class="vertical_item">
+          <h3>Smooth Scroll Lenis</h3>
+          <p>Something something</p>
+        </div>
+        <div class="vertical_item">
+           <h3>Smooth Scroll Lenis</h3>
+           <p>Something something</p>
+        </div>
+        <div class="vertical_item">
+           <h3>Smooth Scroll Lenis</h3>
+           <p>Something something</p>
+        </div>
+       </div>
       </div>
     </div>
+  </section>
   </div>
-</section>
+
+<style>
+html {
+  scroll-behavior: initial;
+  overflow: hidden;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-size: 16px;
+  font-weight: 400;
+  background: #000;
+  color: #fff;
+}
+
+h2 {
+  font-size: 60px;
+  font-weight: 900;
+  line-height: 85%;
+  border-left: 3px solid #ff98a2;
+  padding: 25px;
+  margin: 0;
+}
+
+h2 span {
+  display: block;
+}
+
+h3 {
+  font-size: 20px;
+  font-stretch: expanded;
+  color: #ff98a2;
+  line-height: 100%;
+}
+
+h2, h3, h4 {
+  text-transform: uppercase;
+}
+.container {
+  width: 95%;
+  margin: auto;
+}
+
+section {
+  padding: 50px 0;
+}
+
+.col {
+  width: 50%
+}
+
+#vertical {
+  height: 200vh;
+  width: 100vw;
+}
+
+.vertical_content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+}
+
+.vertical_content .col_left {height: 100%}
+.vertical_content .col_right {width: 40$}
+
+
+
+</style>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
 <script src="https://assets.codepen.io/16327/ScrollTrigger.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
+<script src="../scripts/scrolling.js"></script>
+
 
